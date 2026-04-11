@@ -1,0 +1,260 @@
+/* App wrapper */
+.app {
+  min-height: 100vh;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Spinner circle */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #30363d;
+  border-top: 5px solid #f0b90b;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+/* Spinning animation */
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading text */
+.spinner-text {
+  font-size: 1rem;
+  color: #000000;
+}
+
+/* Controls bar */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Grid / List toggle buttons */
+.view-toggle {
+  display: flex;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.view-toggle button {
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  color: #8b949e;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.view-toggle button:hover {
+  color: #ffffff;
+  background-color: #21262d;
+}
+
+.view-toggle button.active {
+  background-color: #f0b90b;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.spinner p {
+  font-size: 1.1rem;
+  color: #f0b90b;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Grid mode */
+.crypto-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* List mode */
+.crypto-container.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.crypto-container.list .crypto-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+.crypto-container.list .crypto-header {
+  margin-bottom: 0;
+}
+
+.crypto-container.list .crypto-price {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+  gap: 16px;
+}
+/* Card */
+.crypto-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 16px 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.crypto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(240, 185, 11, 0.12);
+}
+
+/* Header */
+.crypto-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* Info row — image + text */
+.crypto-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.crypto-info img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.crypto-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+/* Symbol */
+.symbol {
+  font-size: 0.78rem;
+  color: #8b949e;
+  margin-bottom: 4px;
+}
+
+/* Rank badge */
+.rank {
+  font-size: 0.72rem;
+  background-color: #21262d;
+  color: #f0b90b;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Price section */
+.crypto-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  border-top: 1px solid #30363d;
+  padding-top: 12px;
+}
+
+/* Price */
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Change — shared styles */
+.change {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Positive (green) */
+.positive {
+  color: #3fb950;
+  background-color: rgba(63, 185, 80, 0.1);
+}
+
+/* Negative (red) */
+.negative {
+  color: #f85149;
+  background-color: rgba(248, 81, 73, 0.1);
+}
+
+/* Stats section */
+.crypto-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #30363d;
+  gap: 8px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #ffffff;
+}
