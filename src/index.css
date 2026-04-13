@@ -1,22 +1,34 @@
-/* App wrapper */
-.app {
-  min-height: 100vh;
-  padding: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Loading */
+body {
+  background-color: #0d1117;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== APP WRAPPER ===== */
+.app {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ===== LOADING ===== */
 .loading {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  flex-direction: column;
   gap: 16px;
 }
 
-/* Spinner circle */
 .spinner {
   width: 48px;
   height: 48px;
@@ -26,33 +38,62 @@
   animation: spin 2s linear infinite;
 }
 
-/* Spinning animation */
 @keyframes spin {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* Loading text */
 .spinner-text {
   font-size: 1rem;
-  color: #000000;
+  color: #8b949e;
 }
 
-/* Controls bar */
+/* ===== CONTROLS BAR ===== */
 .controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
+/* ===== FILTER GROUP ===== */
 .filter-group {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-/* Grid / List toggle buttons */
+.filter-group label {
+  font-size: 0.9rem;
+  color: #8b949e;
+  font-weight: 500;
+}
+
+.filter-group select {
+  background-color: #161b22;
+  color: #ffffff;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-group select:hover,
+.filter-group select:focus {
+  border-color: #f0b90b;
+}
+
+.filter-group select option {
+  background-color: #161b22;
+  color: #ffffff;
+}
+
+/* ===== VIEW TOGGLE ===== */
 .view-toggle {
   display: flex;
   background-color: #161b22;
@@ -83,33 +124,14 @@
   font-weight: 700;
 }
 
-/* Loading */
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-}
-
-.spinner p {
-  font-size: 1.1rem;
-  color: #f0b90b;
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
-/* Grid mode */
+/* ===== GRID MODE ===== */
 .crypto-container.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
 
-/* List mode */
+/* ===== LIST MODE ===== */
 .crypto-container.list {
   display: flex;
   flex-direction: column;
@@ -133,7 +155,14 @@
   margin-top: 0;
   gap: 16px;
 }
-/* Card */
+
+.crypto-container.list .crypto-stats {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* ===== CRYPTO CARD ===== */
 .crypto-card {
   background-color: #161b22;
   border: 1px solid #30363d;
@@ -148,7 +177,7 @@
   box-shadow: 0 8px 24px rgba(240, 185, 11, 0.12);
 }
 
-/* Header */
+/* ===== CARD HEADER ===== */
 .crypto-header {
   display: flex;
   align-items: center;
@@ -156,7 +185,6 @@
   margin-bottom: 16px;
 }
 
-/* Info row — image + text */
 .crypto-info {
   display: flex;
   align-items: center;
@@ -176,14 +204,12 @@
   margin-bottom: 3px;
 }
 
-/* Symbol */
 .symbol {
   font-size: 0.78rem;
   color: #8b949e;
   margin-bottom: 4px;
 }
 
-/* Rank badge */
 .rank {
   font-size: 0.72rem;
   background-color: #21262d;
@@ -193,7 +219,7 @@
   font-weight: 600;
 }
 
-/* Price section */
+/* ===== PRICE SECTION ===== */
 .crypto-price {
   display: flex;
   align-items: center;
@@ -203,34 +229,30 @@
   padding-top: 12px;
 }
 
-/* Price */
 .price {
   font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
 }
 
-/* Change — shared styles */
 .change {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   padding: 3px 10px;
   border-radius: 20px;
 }
 
-/* Positive (green) */
 .positive {
   color: #3fb950;
   background-color: rgba(63, 185, 80, 0.1);
 }
 
-/* Negative (red) */
 .negative {
   color: #f85149;
   background-color: rgba(248, 81, 73, 0.1);
 }
 
-/* Stats section */
+/* ===== STATS SECTION ===== */
 .crypto-stats {
   display: flex;
   justify-content: space-between;

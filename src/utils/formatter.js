@@ -9,6 +9,7 @@ export const formatter = (price) => {
     }).format(price)
 }
 
+
 export const formatMarketCap = (marketCap) => {
   if (marketCap >= 1e12) return `${(marketCap / 1e12).toFixed(2)}T`;
   if (marketCap >= 1e9) return `${(marketCap / 1e9).toFixed(2)}B`;
