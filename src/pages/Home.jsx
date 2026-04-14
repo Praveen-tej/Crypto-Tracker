@@ -8,6 +8,7 @@ export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [viewMode, setViewMode] = useState("grid");
   const [sortBy, setSortBy] = useState("market_cap_rank");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const fetchCryptoData = async () => {
     try {
@@ -26,6 +27,13 @@ export const Home = () => {
 
   const filterAndSort = () => {
     let filtered = [...cryptoLists];
+
+    filtered = filtered.filter(
+      (crypto) =>
+        crypto.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        crypto.symbol.toLowerCase().includes(searchQuery.toLowerCase()),
+    );
+
     filtered.sort((a, b) => {
       switch (sortBy) {
         case "name":
@@ -47,7 +55,7 @@ export const Home = () => {
 
   useEffect(() => {
     filterAndSort();
-  }, [sortBy, cryptoLists]);
+  }, [sortBy, cryptoLists, searchQuery]);
 
   return (
     <div>
@@ -59,6 +67,22 @@ export const Home = () => {
           </div>
         ) : (
           <>
+            <div className="header">
+              <div className="header-content">
+                <div className="logo-section">
+                  <h2>🚀 Crypto Lens</h2>
+                  <p>Real Time Cryptocurrency Prices and Real Data</p>
+                </div>
+                <div className="search-section">
+                  <input
+                    type="text"
+                    placeholder="Search Cryptos...."
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    value={searchQuery}
+                  />
+                </div>
+              </div>
+            </div>
             <div className="controls">
               <div className="filter-group">
                 <label>Sort By:</label>
@@ -89,12 +113,17 @@ export const Home = () => {
                 </button>
               </div>
             </div>
-
-            <div className={`crypto-container ${viewMode}`}>
-              {filteredList.map((crypto) => (
-                <CryptoCard key={crypto.id} crypto={crypto} />
-              ))}
-            </div>
+            {filteredList.length === 0 && searchQuery !== "" ? (
+              <div className="no-results">
+                <h3>No Crypto Data Found</h3>
+              </div>
+            ) : (
+              <div className={`crypto-container ${viewMode}`}>
+                {filteredList.map((crypto) => (
+                  <CryptoCard key={crypto.id} crypto={crypto} />
+                ))}
+              </div>
+            )}
           </>
         )}
       </div>
