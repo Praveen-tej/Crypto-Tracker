@@ -327,3 +327,194 @@ body {
   font-weight: 600;
   color: #ffffff;
 }
+
+/* ===== COIN DETAIL ===== */
+.coin-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ===== COIN CARD (wrapper) ===== */
+.coin-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== COIN HEADER ===== */
+.coin-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.coin-title img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.coin-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.coin-header p {
+  font-size: 14px;
+  color: #8b949e;
+  text-transform: uppercase;
+}
+
+.coin-header span {
+  margin-left: auto;
+  font-size: 13px;
+  background-color: #21262d;
+  color: #f0b90b;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ===== PRICE SECTION ===== */
+.coin-price-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #30363d;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ===== CURRENT PRICE ===== */
+.current-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.current-price h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.change-badge {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ===== PRICE RANGES ===== */
+.price-ranges {
+  display: flex;
+  gap: 24px;
+}
+
+.price-range {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.range-label {
+  font-size: 12px;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.range-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ===== BACK BUTTON ===== */
+.header-content button {
+  background-color: transparent;
+  color: #f0b90b;
+  border: 1px solid #f0b90b;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.header-content button:hover {
+  background-color: #f0b90b;
+  color: #000000;
+}
+
+/* ===== NO RESULTS BUTTON ===== */
+.no-results button {
+  margin-top: 16px;
+  background-color: #f0b90b;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ===== CHART SECTION ===== */
+.chart-section {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ===== STATS GRID ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 24px;
+}
+
+/* ===== STAT CARD ===== */
+.stat-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(240, 185, 11, 0.1);
+}
+
+.stat-card .stat-label {
+  font-size: 12px;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card .stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
