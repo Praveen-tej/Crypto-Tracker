@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { fetchCoinData, fetchChartData } from "../api/coinGecko";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { formatter } from "../utils/formatter";
+import { formatMarketCap, formatter } from "../utils/formatter";
 import {
   LineChart,
   BarChart,
@@ -181,24 +181,36 @@ export const CoinDetail = () => {
         <div className="stats-grid">
           <div className="stat-card">
             <span className="stat-label">Market Cap</span>
-            <span className="stat-value">{formatter(coinData.market_data.market_cap.usd)}</span>
+            <span className="stat-value">
+              {formatter(coinData.market_data.market_cap.usd)}
+            </span>
           </div>
 
           <div className="stat-card">
             <span className="stat-label">Volume (24h)</span>
-            <span className="stat-value">{coinData.market_data.total_volume.usd}</span>
+            <span className="stat-value">
+              ${formatMarketCap(coinData.market_data.total_volume.usd)}
+            </span>
           </div>
 
           <div className="stat-card">
             <span className="stat-label">Circulating Supply</span>
-            <span className="stat-value">{coinData.market_data.circulating_supply?.toLocaleString() || "N/A"}</span>
+            <span className="stat-value">
+              {coinData.market_data.circulating_supply?.toLocaleString() ||
+                "N/A"}
+            </span>
           </div>
 
           <div className="stat-card">
             <span className="stat-label">Total Supply</span>
-            <span className="stat-value">{coinData.market_data.total_supply?.toLocaleString() || "N/A"}</span>
+            <span className="stat-value">
+              {coinData.market_data.total_supply?.toLocaleString() || "N/A"}
+            </span>
           </div>
         </div>
+      </div>
+      <div className="footer">
+        Data Provided by the CoinGecko API Updated Every 30 seconds{" "}
       </div>
     </div>
   );

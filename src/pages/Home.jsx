@@ -127,6 +127,7 @@ export const Home = () => {
           </>
         )}
       </div>
+      <div className="footer">Data Provided by the CoinGecko API Updated Every 30 seconds  </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-/* ===== GLOBAL ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* ===== HEADER ===== */
 .header {
   margin-bottom: 24px;
 }
@@ -24,7 +23,7 @@ body {
   gap: 16px;
 }
 
-/* ===== LOGO SECTION ===== */
+
 .logo-section h2 {
   font-size: 1.6rem;
   font-weight: 700;
@@ -37,7 +36,6 @@ body {
   color: #8b949e;
 }
 
-/* ===== SEARCH SECTION ===== */
 .search-section input {
   background-color: #161b22;
   color: #ffffff;
@@ -58,7 +56,6 @@ body {
   border-color: #f0b90b;
 }
 
-/* ===== APP WRAPPER ===== */
 .app {
   min-height: 100vh;
   max-width: 1200px;
@@ -66,7 +63,6 @@ body {
   padding: 24px;
 }
 
-/* ===== LOADING ===== */
 .loading {
   display: flex;
   flex-direction: column;
@@ -95,7 +91,6 @@ body {
   color: #8b949e;
 }
 
-/* ===== CONTROLS BAR ===== */
 .controls {
   display: flex;
   align-items: center;
@@ -105,7 +100,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* ===== FILTER GROUP ===== */
 .filter-group {
   display: flex;
   align-items: center;
@@ -140,7 +134,6 @@ body {
   color: #ffffff;
 }
 
-/* ===== VIEW TOGGLE ===== */
 .view-toggle {
   display: flex;
   background-color: #161b22;
@@ -171,14 +164,12 @@ body {
   font-weight: 700;
 }
 
-/* ===== GRID MODE ===== */
 .crypto-container.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
 
-/* ===== LIST MODE ===== */
 .crypto-container.list {
   display: flex;
   flex-direction: column;
@@ -209,7 +200,6 @@ body {
   margin-top: 0;
 }
 
-/* ===== CRYPTO CARD ===== */
 .crypto-card {
   background-color: #161b22;
   border: 1px solid #30363d;
@@ -224,7 +214,6 @@ body {
   box-shadow: 0 8px 24px rgba(240, 185, 11, 0.12);
 }
 
-/* ===== CARD HEADER ===== */
 .crypto-header {
   display: flex;
   align-items: center;
@@ -266,7 +255,6 @@ body {
   font-weight: 600;
 }
 
-/* ===== PRICE SECTION ===== */
 .crypto-price {
   display: flex;
   align-items: center;
@@ -299,7 +287,6 @@ body {
   background-color: rgba(248, 81, 73, 0.1);
 }
 
-/* ===== STATS SECTION ===== */
 .crypto-stats {
   display: flex;
   justify-content: space-between;
@@ -328,14 +315,12 @@ body {
   color: #ffffff;
 }
 
-/* ===== COIN DETAIL ===== */
 .coin-detail {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-/* ===== COIN CARD (wrapper) ===== */
 .coin-card {
   background-color: #161b22;
   border: 1px solid #30363d;
@@ -346,7 +331,6 @@ body {
   gap: 20px;
 }
 
-/* ===== COIN HEADER ===== */
 .coin-header {
   display: flex;
   align-items: center;
@@ -382,7 +366,6 @@ body {
   font-weight: 600;
 }
 
-/* ===== PRICE SECTION ===== */
 .coin-price-section {
   display: flex;
   align-items: center;
@@ -393,7 +376,6 @@ body {
   gap: 20px;
 }
 
-/* ===== CURRENT PRICE ===== */
 .current-price {
   display: flex;
   align-items: center;
@@ -413,7 +395,6 @@ body {
   border-radius: 20px;
 }
 
-/* ===== PRICE RANGES ===== */
 .price-ranges {
   display: flex;
   gap: 24px;
@@ -438,7 +419,6 @@ body {
   color: #ffffff;
 }
 
-/* ===== BACK BUTTON ===== */
 .header-content button {
   background-color: transparent;
   color: #f0b90b;
@@ -456,20 +436,7 @@ body {
   color: #000000;
 }
 
-/* ===== NO RESULTS BUTTON ===== */
-.no-results button {
-  margin-top: 16px;
-  background-color: #f0b90b;
-  color: #000000;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 24px;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-}
 
-/* ===== CHART SECTION ===== */
 .chart-section {
   background-color: #161b22;
   border: 1px solid #30363d;
@@ -481,7 +448,7 @@ body {
   color: #ffffff;
 }
 
-/* ===== STATS GRID ===== */
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -489,7 +456,7 @@ body {
   margin-top: 24px;
 }
 
-/* ===== STAT CARD ===== */
+
 .stat-card {
   background-color: #161b22;
   border: 1px solid #30363d;
@@ -517,4 +484,47 @@ body {
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  color: #8b949e;
+  border-top: 1px solid #30363d;
+  margin-top: 40px;
+}
+
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 16px;
+  text-align: center;
+}
+
+.no-results p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #8b949e;
+}
+
+.no-results button {
+  background-color: #f0b90b;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.no-results button:hover {
+  background-color: #d4a009;
 }

@@ -22,7 +22,7 @@ export const fetchCoinData = async (id) => {
 
 export const fetchChartData = async (id) => {
     const response = await fetch(
-        `${BASE_URL}/coins/${id}/market_chart?vs_currency=usd&days=14`
+        `${BASE_URL}/coins/${id}/market_chart?vs_currency=usd&days=7`
     );
     if (!response.ok) {
         throw new Error("Failed to fetch chart data");
