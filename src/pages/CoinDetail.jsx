@@ -150,7 +150,7 @@ export const CoinDetail = () => {
               <XAxis
                 dataKey="time"
                 stroke="#9ca3af"
-                style={{ fontSize: "12px" }}
+                style={{ fontSize: "10px" }}
               />
 
               <YAxis
