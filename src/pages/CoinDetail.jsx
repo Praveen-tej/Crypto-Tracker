@@ -36,16 +36,12 @@ export const CoinDetail = () => {
     try {
       const data = await fetchChartData(id);
       const formattedData = data.prices.map((price) => ({
-        time: new Date(price[0]).toLocaleDateString("en-US", {
+        time: new Date(price[0]).toLocaleDateString("en-US",{
           month: "short",
           day: "numeric",
         }),
         price: parseFloat(price[1].toFixed(2)),
       }));
-      // const uniqueData = formattedData.filter(
-      //   (item, index, arr) =>
-      //     index === arr.findIndex((d) => d.time === item.time), // ✅ one per day
-      // );
 
       setChartData(formattedData);
     } catch (err) {
