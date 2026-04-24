@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { formatMarketCap, formatter } from "../utils/formatter";
 import {
   LineChart,
-  BarChart,
   ResponsiveContainer,
   CartesianGrid,
   XAxis,
