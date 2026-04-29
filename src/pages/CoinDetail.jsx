@@ -3,6 +3,7 @@ import { fetchCoinData, fetchChartData } from "../api/coinGecko";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { formatMarketCap, formatter } from "../utils/formatter";
+
 import {
   LineChart,
   ResponsiveContainer,
