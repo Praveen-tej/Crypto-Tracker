@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { formatter, formatMarketCap } from "../utils/formatter";
 
-
-
 export const CryptoCard = ({ crypto }) => {
   return (
     <Link to={`/coin/${crypto.id}`}  style={{textDecoration:"none"}}    >
